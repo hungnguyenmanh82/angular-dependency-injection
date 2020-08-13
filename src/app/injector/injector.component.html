@@ -1,0 +1,23 @@
+<div class="injector-component-layout">
+  <h2>injector.component:  Injector  (ko nên, nên dùng DI constructor) </h2>
+  <p style="color: red;">
+    Injector: là 1 Service đặc biêt của @angular/core hỗ trợ việc lấy các service đã khởi tạo ở Component với providers[]
+    <br>
+    các services phải khai báo ở provider[] of component
+    <br>
+    các service ko cần phải khai báo ở *.module.ts => đã khai báo ở @component() rồi
+  </p>
+
+  <!-- các services -->
+  <p style="color: blue;"> các services lấy từ Injector: </p>
+  <div id="car">{{car|json}}</div>
+  <div id="hero">{{hero|json}}</div>
+  <div id="rodent">{{rodent|json}}</div>
+
+  <!-- class ko phải services -->
+  <!--  -->
+  <p style="color: blue;"> các class object lấy từ Injector: </p>
+  <div>{{engin|json}}</div>
+  <div>{{tires|json}}</div>
+
+</div>
