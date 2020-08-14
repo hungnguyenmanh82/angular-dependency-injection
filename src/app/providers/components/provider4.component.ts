@@ -14,11 +14,12 @@ import { BetterLogger } from '../better-logger.service';
       userClass: class implement thực tế
     </p>
   `,
-  providers: [{ provide: Logger, useClass: BetterLogger }]
+  providers: [{ provide: Logger, useClass: BetterLogger }],
 })
 export class Provider4Component {
   log: string;
-  explaination: string = 'providers: [{ provide: Logger, useClass: BetterLogger }]';
+  explaination: string =
+    'providers: [{ provide: Logger, useClass: BetterLogger }]';
 
   constructor(logger: Logger) {
     // logger là interface => thực tế là BetterLogger implementation
