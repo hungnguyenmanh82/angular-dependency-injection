@@ -35,6 +35,5 @@ export class CarComponent {
     // engine1 = engine2 => đều là singlton khởi tạo bởi providers[] của component
     engine1.cylinders = 11111;
     engine2.cylinders = 22222;
-
   }
 }

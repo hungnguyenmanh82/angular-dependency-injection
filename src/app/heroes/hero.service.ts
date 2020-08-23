@@ -3,16 +3,20 @@ import { HEROES } from './mock-heroes';
 import { Logger } from '../logger.service';
 import { UserService } from '../user.service';
 
+/**
+ * có thể chỉ định Service này cho module nào:
+ *   providedIn: UserModule,
+ *   providedIn: 'root'
+ *   providedIn: 'any',
+ */
 @Injectable({
   providedIn: 'root',
   useFactory: (logger: Logger, userService: UserService) =>
-      new HeroService(logger, userService.user.isAuthorized),
+    new HeroService(logger, userService.user.isAuthorized),
   deps: [Logger, UserService],
 })
 export class HeroService {
-  constructor(
-    private logger: Logger,
-    private isAuthorized: boolean) { }
+  constructor(private logger: Logger, private isAuthorized: boolean) {}
 
   getHeroes() {
     const auth = this.isAuthorized ? 'authorized ' : 'unauthorized';

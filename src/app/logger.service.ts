@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * có thể chỉ định Service này cho module nào:
+ *   providedIn: UserModule,
+ *   providedIn: 'root'
+ *   providedIn: 'any',
+ */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Logger {
   public logs: string[] = []; // capture logs for testing

@@ -1,32 +1,30 @@
 <div class="car-component-layout">
-  <h1> car.component: 3 cách khởi tạo Object class </h1>
+  <h1>car.component: 3 cách khởi tạo Object class</h1>
   <div>
-    <h2>Cách 1: dùng DI với khai báo Provider[] tại Component: (nên dùng)  </h2>
+    <h2>Cách 1: dùng DI với khai báo Provider[] tại Component: (nên dùng)</h2>
     <p style="color: red;">
       các class ko cần khai báo injectable() vẫn là singleton
-      <br>
-      đây là singleton nên car1 = car2,  engine1 = engine2
+      <br />
+      đây là singleton nên car1 = car2, engine1 = engine2
     </p>
 
-    car1 = {{car1|json}}
-    <br>
-    car2 = {{car2|json}}
-    <br>
-    engine1 = {{engine1|json}}
-    <br>
-    engine2 = {{engine2|json}}
-
+    car1 = {{ car1 | json }}
+    <br />
+    car2 = {{ car2 | json }}
+    <br />
+    engine1 = {{ engine1 | json }}
+    <br />
+    engine2 = {{ engine2 | json }}
   </div>
 
   <div id="injector">
-    <h2>cách 2: manually dùng Injector.create()/get(): (ko nên)  </h2>
+    <h2>cách 2: manually dùng Injector.create()/get(): (ko nên)</h2>
 
-    {{injectorCar|json}}
+    {{ injectorCar | json }}
   </div>
 
   <div id="factory">
-    <h2>cách 3: dùng factory pattern: (ko nên, vì phải code nhiều) </h2>
-    {{factoryCar|json}}
+    <h2>cách 3: dùng factory pattern: (ko nên, vì phải code nhiều)</h2>
+    {{ factoryCar | json }}
   </div>
-
-</div >
+</div>
