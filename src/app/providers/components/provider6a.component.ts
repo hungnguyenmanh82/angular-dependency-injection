@@ -13,7 +13,7 @@ import { OldLogger } from '../old-logger.service';
       <br />
       userClass: class implement thực tế
       <br />
-      sẽ tạo ra 2 instance của NewLogger => vì useClass (khác vd Provider6a.component)
+      sẽ tạo ra 2 instance của NewLogger => vì useClass (khác vd Provider6b.component)
       <br>
       Nếu dùng useExisting sẽ là 1 instance
     </p>
