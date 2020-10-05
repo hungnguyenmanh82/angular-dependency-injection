@@ -1,19 +1,21 @@
 <div class="injector-component-layout">
-  <h2>injector2.component: dùng DI constructor (nên dùng, ko dùng Injector) </h2>
-  <p style="color: red;">
+  <h2>injector2.component: dùng DI constructor (nên dùng, ko dùng Injector)</h2>
+  <p style="color: red">
     dùng DI constructor tường minh và ít phải viết code hơn. Dễ hiểu hơn Injector
   </p>
 
   <!-- các services -->
-  <p style="color: blue;"> các services lấy từ Injector: </p>
-  <div id="car">{{car|json}}</div>
-  <div id="hero">{{hero|json}}</div>
+  <p style="color: blue">các services lấy từ Injector:</p>
+  <div id="car">{{ car | json }}</div>
+  <div id="hero">{{ hero | json }}</div>
 
   <!-- class ko phải services -->
   <!--  -->
-  <p style="color: blue;"> các class object ko phải injectable() vẫn dùng DI ok: </p>
-  <div style="color: red;">{{customer|json}}</div>
-  <div>{{engin|json}}</div>
-  <div>{{tires|json}}</div>
-
+  <p style="color: blue">
+    các class object ko phải injectable() vẫn dùng DI ok:
+    <br />
+    vì chúng đc Service dùng đến như là DI
+  </p>
+  <div>{{ engin | json }}</div>
+  <div>{{ tires | json }}</div>
 </div>

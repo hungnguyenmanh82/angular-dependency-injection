@@ -1,8 +1,13 @@
 <div class="hero-list-component-layout">
-  <h3>hero-list:</h3>
-  <div *ngFor="let hero of heroes" >
-    {{hero.id}} - {{hero.name}}
-    ({{hero.isSecret ? 'secret' : 'public'}})
+  <h3>hero-list.component:</h3>
+  <p style="color: red">
+    child dùng Service DI ok tất cả các trường hợp
+    <br />
+    Nếu Service đc khai báo Providers[] ở Parent thì ưu tiên trc khai báo ở Module
+    <br />
+    nếu service ko khai báo Providers[] ở Parent, Module thì nó dùng thiết lập default của Service
+  </p>
+  <div *ngFor="let hero of heroes">
+    {{ hero.id }} - {{ hero.name }} ({{ hero.isSecret ? 'secret' : 'public' }})
   </div>
-
 </div>

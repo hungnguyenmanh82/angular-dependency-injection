@@ -4,7 +4,6 @@ import { heroServiceProvider } from '../heroes/hero.service.provider';
 import { Logger } from '../logger.service';
 import { HeroService } from '../heroes/hero.service';
 import { Hero } from '../heroes/hero';
-import { Customer } from './customer';
 
 @Component({
   selector: 'app-injector2',
@@ -14,7 +13,7 @@ import { Customer } from './customer';
    * Customer, Engine, Tires là class ko phải là Service => lại là DI của Car nên phải thêm vào.
    * Service, class khởi tạo cùng Component. Ko cần khai báo ở *.module.ts
    */
-  providers: [Customer, Car, Engine, Tires, heroServiceProvider, Logger],
+  providers: [Car, Engine, Tires, heroServiceProvider, Logger],
 })
 export class Injector2Component implements OnInit {
   hero: Hero;
@@ -24,7 +23,6 @@ export class Injector2Component implements OnInit {
    * Phải khai báo là public/private mới đc => nếu ko compile sẽ báo lỗi ở *.html
    */
   constructor(
-    public customer: Customer,
     public car: Car,
     public engin: Engine,
     public tires: Tires,

@@ -11,10 +11,11 @@ import { UserService } from './user.service';
 export class AppComponent {
   title: string;
 
-  constructor(
-    @Inject(APP_CONFIG) config: AppConfig,
-  ) {
+  /**
+   * Chỗ này khó hiểu => cái gì đơn giản thì dùng.
+   * Phức tạp ko nên dùng vì chi phí maintain sẽ lớn
+   */
+  constructor(@Inject(APP_CONFIG) config: AppConfig) {
     this.title = config.title;
   }
-
 }

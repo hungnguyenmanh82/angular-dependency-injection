@@ -12,14 +12,11 @@ import { Provider9Component } from './components/provider9.component';
 import { Provider10Component } from './components/provider10.component';
 import { ProvidersComponent } from './providers.component';
 
-
 @NgModule({
-  imports:[
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   declarations: [
-    Provider1Component,
-    Provider3Component,
+    Provider1Component /* child component */,
+    Provider3Component /* child */,
     Provider4Component,
     Provider5Component,
     Provider6aComponent,
@@ -27,13 +24,13 @@ import { ProvidersComponent } from './providers.component';
     Provider7Component,
     Provider8Component,
     Provider9Component,
-    Provider10Component,
-    ProvidersComponent,
+    Provider10Component /* child */,
+    ProvidersComponent /* Parent component */,
   ],
 
   /**
    * chỉ export parent component thôi
    */
-  exports: [ ProvidersComponent ]
- })
- export class ProvidersModule {}
+  exports: [ProvidersComponent],
+})
+export class ProvidersModule {}
